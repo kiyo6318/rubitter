@@ -1,0 +1,7 @@
+<%= form_with(model: @rubeet,local:true) do |form|%>
+	<div class="rubeet_content">
+		<%= form.label :今の気持ちをつぶやこう %>
+		<%= form.text_field :content %>
+	</div>
+	<%= form.submit %>
+<% end %>
