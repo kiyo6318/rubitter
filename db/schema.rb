@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2019_03_25_075515) do
   enable_extension "plpgsql"
 
   create_table "rubeets", force: :cascade do |t|
+    t.text "content"
   end
 
 end
