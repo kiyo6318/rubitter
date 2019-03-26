@@ -1,5 +1,5 @@
 class RubeetsController < ApplicationController
-before_action :set_rubeet,only:[:edit,:update]
+before_action :set_rubeet,only:[:edit,:update,:destroy]
 
   def index
   	@rubeets = Rubeet.all
@@ -27,6 +27,11 @@ before_action :set_rubeet,only:[:edit,:update]
   	else
   		render 'edit'
   	end
+  end
+
+  def destroy
+  	@rubeet.destroy
+  	redirect_to rubeets_path,notice:"つぶやきを削除しました"
   end
 
   private
