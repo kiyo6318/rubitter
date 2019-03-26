@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  resources :rubeets
+  resources :rubeets do
+  	collection do
+  		post :confirm
+  	end
+  end
 end

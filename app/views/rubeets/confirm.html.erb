@@ -1,0 +1,6 @@
+<h3>以下の内容でよろしいですか？</h3>
+<%= form_with(model:@rubeet,url:rubeets_path,local:true) do |form| %>
+	<%= form.hidden_field:content %>
+	<p>内容:<%= @rubeet.content %></p>
+	<%= form.submit "つぶやく" %>
+	<% end %>

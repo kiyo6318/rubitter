@@ -34,6 +34,10 @@ before_action :set_rubeet,only:[:edit,:update,:destroy]
   	redirect_to rubeets_path,notice:"つぶやきを削除しました"
   end
 
+  def confirm
+  	@rubeet = Rubeet.new(rubeet_params)
+  end
+
   private
   def rubeet_params
   	params.require(:rubeet).permit(:content)

@@ -1,4 +1,4 @@
-<%= form_with(model: @rubeet,local:true) do |form|%>
+<%= form_with(model: @rubeet,local:true,url:choose_new_or_edit) do |form|%>
 	<% if @rubeet.errors.any? %>
 		<div id="error_explanation">
 			<h2><%= @rubeet.errors.count %>件のエラーがあります。</h2>
