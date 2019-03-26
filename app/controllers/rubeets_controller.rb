@@ -6,7 +6,11 @@ before_action :set_rubeet,only:[:edit,:update,:destroy]
   end
 
   def new
-  	@rubeet = Rubeet.new
+  	if params[:back]
+  		@rubeet = Rubeet.new(rubeet_params)
+  	else
+  		@rubeet = Rubeet.new
+  	end
   end
 
   def create

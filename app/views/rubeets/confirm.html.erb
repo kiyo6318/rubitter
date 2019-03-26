@@ -1,6 +1,11 @@
 <h3>以下の内容でよろしいですか？</h3>
 <%= form_with(model:@rubeet,url:rubeets_path,local:true) do |form| %>
-	<%= form.hidden_field:content %>
+	<%= form.hidden_field :content %>
 	<p>内容:<%= @rubeet.content %></p>
 	<%= form.submit "つぶやく" %>
-	<% end %>
+<% end %>
+
+<%= form_with(model:@rubeet,url:new_rubeet_path,local:true,method:'get') do |form| %>
+	<%= form.hidden_field :content %>
+	<%= form.submit "戻る",name: 'back' %>
+<% end %>	
