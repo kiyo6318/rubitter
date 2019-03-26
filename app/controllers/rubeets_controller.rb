@@ -40,6 +40,7 @@ before_action :set_rubeet,only:[:edit,:update,:destroy]
 
   def confirm
   	@rubeet = Rubeet.new(rubeet_params)
+  	render :new if @rubeet.invalid?
   end
 
   private
