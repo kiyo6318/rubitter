@@ -1,4 +1,6 @@
 class RubeetsController < ApplicationController
+before_action :set_rubeet,only:[:edit,:update]
+
   def index
   	@rubeets = Rubeet.all
   end
@@ -17,11 +19,9 @@ class RubeetsController < ApplicationController
   end
 
   def edit
-  	@rubeet = Rubeet.find(params[:id])
   end
 
   def update
-  	@rubeet = Rubeet.find(params[:id])
   	if @rubeet.update(rubeet_params)
   		redirect_to rubeets_path,notice:"つぶやきを編集しました"
   	else
@@ -32,5 +32,9 @@ class RubeetsController < ApplicationController
   private
   def rubeet_params
   	params.require(:rubeet).permit(:content)
+  end
+
+  def set_rubeet
+  	@rubeet = Rubeet.find(params[:id])
   end
 end

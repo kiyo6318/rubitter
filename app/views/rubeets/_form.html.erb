@@ -1,0 +1,20 @@
+<%= form_with(model: @rubeet,local:true) do |form|%>
+	<% if @rubeet.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= @rubeet.errors.count %>件のエラーがあります。</h2>
+			<ul>
+			<%= @rubeet.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+			</ul>
+		</div>
+	<% end %>	
+
+
+		<div class="rubeet_content">
+			<%= form.label :今の気持ちをつぶやこう %>
+			<%= form.text_field :content %>
+		</div>
+		<%= form.submit %>
+<% end %>
+<%= link_to "つぶやき一覧画面に戻る",rubeets_path %>
