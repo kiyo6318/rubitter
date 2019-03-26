@@ -15,6 +15,20 @@ class RubeetsController < ApplicationController
 			render 'new'
 		end
   end
+
+  def edit
+  	@rubeet = Rubeet.find(params[:id])
+  end
+
+  def update
+  	@rubeet = Rubeet.find(params[:id])
+  	if @rubeet.update(rubeet_params)
+  		redirect_to rubeets_path,notice:"つぶやきを編集しました"
+  	else
+  		render 'edit'
+  	end
+  end
+
   private
   def rubeet_params
   	params.require(:rubeet).permit(:content)
