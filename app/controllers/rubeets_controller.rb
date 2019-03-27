@@ -16,7 +16,7 @@ before_action :set_rubeet,only:[:edit,:update,:destroy]
   def create
   	@rubeet = Rubeet.new(rubeet_params)
   	if @rubeet.save
-			redirect_to new_rubeet_path,notice:"つぶやきました！"
+			redirect_to rubeets_path,notice:"つぶやきました！"
 		else
 			render 'new'
 		end
