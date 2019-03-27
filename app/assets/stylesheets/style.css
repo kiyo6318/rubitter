@@ -1,0 +1,79 @@
+html{
+	height: 100%;
+}
+
+body{
+	background-image: url("/images/back_image.jpg");
+	height: 100%;
+	margin:0 auto;
+}
+
+.header{
+	background-color: aqua;
+	height: 100px;
+	width: 100%;
+}
+
+.title{
+	font-size: 60px;
+	color: white;
+	margin-top: 30px;
+	text-decoration: none;
+}
+
+.menu{
+	font-size: 20px;
+	color: white;
+	float: right;
+	margin: 30px;
+}
+
+.wrap{
+	width: 100%;
+	min-height: 100%;
+	position: relative; 
+}
+
+h1{
+	text-align: center;
+}
+
+#alert{
+	text-align: center;
+}
+
+.main_content{
+	text-align: center;
+	padding-bottom: 100px;
+}
+
+table{
+	border-spacing: 10px;
+}
+
+.text_area{
+	font-size: 150%;
+	height: 250px;
+	width: 500px;
+}
+
+.text{
+	font-size:150%;
+}
+
+.button{
+	width: 80px;
+	font-size: 80px;
+}
+
+.operation{
+	font-size:10%;
+}
+
+footer{
+	position: absolute; 
+	background-color:aqua;
+	height: 100px;
+	width:100%;
+	bottom: 0;
+}

@@ -1,11 +1,17 @@
-<h3>以下の内容でよろしいですか？</h3>
-<%= form_with(model:@rubeet,url:rubeets_path,local:true) do |form| %>
-	<%= form.hidden_field :content %>
-	<p>内容:<%= @rubeet.content %></p>
-	<%= form.submit "つぶやく" %>
-<% end %>
+<div class="wrap">
+	<%= render 'header'%>
+	<h1>以下の内容でよろしいですか？</h1>
+	<div class="main_content">
+		<%= form_with(model:@rubeet,url:rubeets_path,local:true) do |form| %>
+			<%= form.hidden_field :content %>
+			<p class="text"><%= @rubeet.content %></p>
+			<%= form.submit "つぶやく",class:"button"%>
+		<% end %>
 
-<%= form_with(model:@rubeet,url:new_rubeet_path,local:true,method:'get') do |form| %>
-	<%= form.hidden_field :content %>
-	<%= form.submit "戻る",name: 'back' %>
-<% end %>	
+		<%= form_with(model:@rubeet,url:new_rubeet_path,local:true,method:'get') do |form| %>
+			<%= form.hidden_field :content %>
+			<%= form.submit "戻る",name: 'back',class:"button" %>
+		<% end %>
+		<%= render 'fotter' %>
+	</div>
+</div>	
