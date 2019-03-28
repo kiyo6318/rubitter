@@ -62,11 +62,16 @@ table{
 }
 
 .button{
-	font-size: 80px;
+	appearance: none;
+  border: none;
+  border-raduis: none;
+	width: 100px;
+	height: 40px;
+	font-size: 1.2em;
 }
 
 .operation{
-	font-size:10%;
+	min-width: 150px;
 }
 
 footer{

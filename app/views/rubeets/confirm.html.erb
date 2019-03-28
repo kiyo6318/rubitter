@@ -10,6 +10,7 @@
 
 		<%= form_with(model:@rubeet,url:new_rubeet_path,local:true,method:'get') do |form| %>
 			<%= form.hidden_field :content %>
+		</br>
 			<%= form.submit "戻る",name: 'back',class:"button" %>
 		<% end %>
 		<%= render 'fotter' %>
