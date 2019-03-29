@@ -4,14 +4,14 @@
 	<div class="main_content">
 		<%= form_with(model:@rubeet,url:rubeets_path,local:true) do |form| %>
 			<%= form.hidden_field :content %>
-			<p class="text"><%= @rubeet.content %></p>
+		  <p class="text"><%= @rubeet.content %></p>
 			<%= form.submit "つぶやく",class:"button"%>
 		<% end %>
 
 		<%= form_with(model:@rubeet,url:new_rubeet_path,local:true,method:'get') do |form| %>
 			<%= form.hidden_field :content %>
 		</br>
-			<%= form.submit "戻る",name: 'back',class:"button" %>
+		  <%= form.submit "戻る",name: 'back',class:"button" %>
 		<% end %>
 		<%= render 'fotter' %>
 	</div>
