@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="/Users/kiyonari6318/workspace/TwitterClone/rubitter/app/assets/stylesheets/style.css">
-	</head>
-	<body>
-		<div class="wrap">
-			<%= render 'header' %>
-			<h1>つぶやき一覧</h1>
-			<div id="alert"><%= notice %></div>
-			<div class="main_content">
-				<table align="center">
-				<% @rubeets.each do |rubeet| %>
-					<tr>
-						<td class="text"><%= rubeet.content %></td>
-						<td class="operation"><%= link_to "つぶやきを編集する",edit_rubeet_path(rubeet.id) %></td>
-						<td class="operation"><%= link_to "つぶやきを削除する",rubeet_path(rubeet.id),method: :delete ,data:{confirm:"本当に削除してもよろしいですか？"}%></td>
-					</tr>
-				<% end %>
-				</table>
-			</div>
-			<%= render 'fotter' %>
-	  </div>
-	</body>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/Users/kiyonari6318/workspace/TwitterClone/rubitter/app/assets/stylesheets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <%= render 'header' %>
+    <h1>つぶやき一覧</h1>
+    <div id="alert"><%= notice %></div>
+    <div class="main_content">
+      <table align="center">
+        <% @rubeets.each do |rubeet| %>
+        <tr>
+          <td class="text"><%= rubeet.content %></td>
+          <td class="operation"><%= link_to "つぶやきを編集する",edit_rubeet_path(rubeet.id) %></td>
+          <td class="operation"><%= link_to "つぶやきを削除する",rubeet_path(rubeet.id),method: :delete ,data:{confirm:"本当に削除してもよろしいですか？"}%></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+    <%= render 'fotter' %>
+  </div>
+</body>
 </html>
